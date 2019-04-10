@@ -12,35 +12,35 @@ Se define una matriz en forma de lista de rango 9
 """
 matrix = list(range(9))
 
-def line(letra, uno, dos, tres):
+def linea(letra, uno, dos, tres):
     """
-    Se define el criterio perdidor, con el caracter o letra alineado en 3 posiciones de la matriz sin interrupción del oponente
+    Se define el criterio ganador, con el caracter o letra alineado en 3 posiciones de la matriz sin interrupción del oponente
     """
     if matrix[uno] == letra and matrix[dos] == letra and matrix[tres] == letra:
         return True
 
 def check_winner(letra):
     """
-    Se busca al perdidor en todas las posibles combinaciones de victoria. 
+    Se busca al ganador en todas las posibles combinaciones de victoria. 
     """
     win = False
-    if line(letra, 0, 1, 2):
+    if linea(letra, 0, 1, 2):
         win = True
-    elif line(letra, 3, 4, 5):
+    elif linea(letra, 3, 4, 5):
         win = True
-    elif line(letra, 6, 7, 8):
+    elif linea(letra, 6, 7, 8):
         win = True
-    elif line(letra, 0, 4, 8):
+    elif linea(letra, 0, 4, 8):
         win = True
-    elif line(letra, 2, 4, 6):
+    elif linea(letra, 2, 4, 6):
         win = True
-    elif line(letra, 0, 3, 6):
+    elif linea(letra, 0, 3, 6):
         win = True
-    elif line(letra, 1, 4, 7):
+    elif linea(letra, 1, 4, 7):
         win = True
-    elif line(letra, 2, 5, 8):
+    elif linea(letra, 2, 5, 8):
         win = True
-    elif line(letra, 2, 5, 8):
+    elif linea(letra, 2, 5, 8):
         win = True
 
     return win
